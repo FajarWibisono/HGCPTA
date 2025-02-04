@@ -43,8 +43,8 @@ st.markdown(
 st.title("📓 HCTPA GUIDE")
 st.markdown(
     """
-    ### Selamat Datang di Asisten Pengetahuan HCPTA
-    Chat Bot ini akan membantu Anda memahami lebih dalam HCPTA framework.
+    ### Selamat Datang di Asisten Pengetahuan HCTPA
+    Chat Bot ini akan membantu Anda memahami lebih dalam HCTPA framework.
     """
 )
 
