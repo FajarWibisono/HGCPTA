@@ -79,7 +79,7 @@ INDO_PROMPT_TEMPLATE = PromptTemplate(
 )
 
 # ─────────────────────────────────────────────────────────────────────────────────
-# 4. PREPROCESS DOCUMENT (FUNGSIONALITAS UTK BAHASA INDONESIA)
+# 3.1. PREPROCESS DOCUMENT (FUNGSIONALITAS UTK BAHASA INDONESIA)
 # ─────────────────────────────────────────────────────────────────────────────────
 
 def preprocess_document(text: str) -> str:
