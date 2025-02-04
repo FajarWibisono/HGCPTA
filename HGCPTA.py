@@ -155,7 +155,7 @@ if st.session_state.chain:
             st.write(message["content"])
 
     # 6.2 Chat Input
-    prompt = st.chat_input("✍️tuliskan pertanyaan Anda tentang HCPTA di sini")
+    prompt = st.chat_input("✍️tuliskan pertanyaan Anda tentang HCTPA di sini")
     if prompt:
         # Tambahkan pertanyaan user ke riwayat chat
         st.session_state.chat_history.append({"role": "user", "content": prompt})
