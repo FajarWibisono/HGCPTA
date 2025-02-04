@@ -1,8 +1,5 @@
 ﻿import streamlit as st
 import os
-
-# pip install streamlit langchain huggingface_hub sentence-transformers faiss-cpu
-
 from langchain_groq import ChatGroq
 from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
