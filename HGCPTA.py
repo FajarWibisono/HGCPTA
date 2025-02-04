@@ -22,7 +22,7 @@ from langchain_core.chat_history import BaseChatMessageHistory
 os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 
 st.set_page_config(
-    page_title="HCPTA",
+    page_title="HCTPA",
     page_icon="📓",
     layout="wide"
 )
@@ -40,7 +40,7 @@ st.markdown(
 )
 
 # Judul Aplikasi
-st.title("📓 HCPTA GUIDE")
+st.title("📓 HCTPA GUIDE")
 st.markdown(
     """
     ### Selamat Datang di Asisten Pengetahuan HCPTA
