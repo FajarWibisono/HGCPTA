@@ -78,6 +78,41 @@ INDO_PROMPT_TEMPLATE = PromptTemplate(
     template=PROMPT_INDONESIA
 )
 
+# ─────────────────────────────────────────────────────────────────────────────────
+# 4. PREPROCESS DOCUMENT (FUNGSIONALITAS UTK BAHASA INDONESIA)
+# ─────────────────────────────────────────────────────────────────────────────────
+
+def preprocess_document(text: str) -> str:
+    """Preprocessing khusus untuk dokumen Bahasa Indonesia."""
+    import re
+
+    # Bersihkan karakter khusus
+    text = re.sub(r'[^\w\s\.]', ' ', text)
+
+    # Normalisasi spasi
+    text = ' '.join(text.split())
+
+    # Handling untuk singkatan umum bahasa Indonesia
+    abbreviations = {
+        'yg': 'yang',
+        'dgn': 'dengan',
+        'utk': 'untuk',
+        'tsb': 'tersebut',
+        'dll': 'dan lain-lain',
+        'dst': 'dan seterusnya',
+        'dsb': 'dan sebagainya',
+        'spt': 'seperti',
+        'krn': 'karena',
+        'pd': 'pada',
+        'dr': 'dari',
+        'knp': 'kenapa',
+        'HCTPA': 'Human Capital Technology & People Analytics'              
+    }
+    for abbr, full in abbreviations.items():
+        text = re.sub(r'\b' + abbr + r'\b', full, text, flags=re.IGNORECASE)
+
+    return text
+
 # ─────────────────────────────────────────────────────────────────────────────
 # 4. FUNGSI INISIALISASI RAG
 # ─────────────────────────────────────────────────────────────────────────────
