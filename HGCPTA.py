@@ -138,10 +138,10 @@ def initialize_rag():
         # 4.4 Membuat Vector Store FAISS
         vectorstore = FAISS.from_documents(texts, embeddings)
 
-        # 4.5 Menginisialisasi LLM (ChatGroq)
+        # 4.5 Menginisialisasi LLM (ChatGroq) #alternate model mixtral-8x7b-32768
         llm = ChatGroq(
             temperature=0.54,
-            model_name="mixtral-8x7b-32768",
+            model_name="gemma2-9b-it",
             max_tokens=1024
         )
 
