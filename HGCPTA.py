@@ -141,7 +141,7 @@ def initialize_rag():
         # 4.5 Menginisialisasi LLM (ChatGroq) #alternate model mixtral-8x7b-32768
         llm = ChatGroq(
             temperature=0.54,
-            model_name="gemma2-9b-it",
+            model_name="llama3-70b-8192",
             max_tokens=1024
         )
 
